@@ -1,0 +1,12 @@
+uploads/gcp-key.json
+
+node_modules/
+
+# Logs
+logs/
+
+# Environment variables
+.env
+
+# IDEs
+.vscode/

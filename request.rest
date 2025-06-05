@@ -1,0 +1,40 @@
+###
+GET http://localhost:5000/Barang
+
+###
+GET http://localhost:5000/Barang/1
+
+###
+POST  http://localhost:5000/add
+Content-Type: application/json
+
+{
+  "nama": "Kemeja keCHIL",
+  "kategori": "atasan",
+  "deskripsi": "Kemeja flanel lengan panjang cocok untuk musim hujan.",
+  "foto": "https://example.com/images/kemeja-flanel-BLABLABALABALABALAB.jpg",
+  "ukuran": "L",
+  "jenis_kelamin": "pria",
+  "merk": "Uniqlo",
+  "kondisi": "Excellent Condition",
+  "harga": 125000
+}
+
+###
+PATCH  http://localhost:5000/update/10
+Content-Type: application/json
+
+{
+  "nama": "Kemeja keCHIL",
+  "kategori": "atasan",
+  "deskripsi": "Kemeja flanel lengan panjang cocok untuk musim hujan.",
+  //"foto": "https://example.com/images/kemeja-flanel-BLABLABALABALABALAB.jpg",
+  "ukuran": "L",
+  "jenis_kelamin": "pria",
+  "merk": "Uniqlo",
+  "kondisi": "Excellent Condition",
+  "harga": 12500
+}
+
+###
+DELETE   http://localhost:5000/Barang/7
