@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import db_barang from './config/database_barang.js';
 import Barang from './models/barangModel.js';
 import routerBarang from './routes/barangRoute.js';
@@ -19,7 +20,7 @@ try {
 }
 
 
-
+app.use(cors()); 
 app.use(express.json()); 
 app.use(routerBarang);
 
