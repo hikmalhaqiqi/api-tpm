@@ -5,7 +5,12 @@ steps:
     args: ["cp", "${_ENV}", ".env"]
 
   - name: "gcr.io/cloud-builders/gsutil"
-    args: ["cp", "${_GCP_KEY}", "uploads/gcp_key.json"]
+    entrypoint: bash
+    args:
+      - "-c"
+      - |
+        mkdir -p uploads
+        gsutil cp "${_GCP_KEY}" "uploads/gcp-key.json"
 
   # 1. Build Docker image untuk backend
   - name: "gcr.io/cloud-builders/docker"
