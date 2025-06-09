@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 
-const db_barang = new Sequelize('RECOVER_YOUR_DATA', 'root', '', {
-    host: '35.222.102.25',
+const db_barang = new Sequelize('barang_database', 'root', 'f-02tccprakez', {
+    host: '104.155.153.160',
     dialect: 'mysql',
 });
 

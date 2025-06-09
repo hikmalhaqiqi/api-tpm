@@ -22,7 +22,7 @@ export const uploadImageToGCS = (file) => {
     }
 
     const ext = path.extname(file.originalname);
-    const gcsFileName = `${uuidv4()}${ext}`;
+    const gcsFileName = `produkThrifting/foto-produk/${uuidv4()}${ext}`;
     const blob = bucket.file(gcsFileName);
     const blobStream = blob.createWriteStream({
       resumable: false,
@@ -36,7 +36,7 @@ export const uploadImageToGCS = (file) => {
     blobStream.on("finish", async () => {
       try {
         // Buat file bisa diakses publik
-        await blob.makePublic();
+        //await blob.makePublic();
 
         // Dapatkan URL publik
         const publicUrl = `https://storage.googleapis.com/${bucket.name}/${blob.name}`;
